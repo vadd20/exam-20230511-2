@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.List;
 import entity.TeaBrewing;
 import io.DataLoader;
-import io.DeviatedWriter;
+import io.Writer;
 
 /**
  * Основной класс.
@@ -17,10 +17,10 @@ public class Main {
             dataLoader.readTeaBrewingData(dataLoader.readTeaData(dataLoader.readTeaTypeData()));
 
         var deviationProcessor = new DeviationProcessor();
-        var dateToDeviatedSet = deviationProcessor.findDateToDeviatedPersons(teaBrewingList);
+        var dateToNotDeviatedSet = deviationProcessor.findDateToNotDeviatedPersons(teaBrewingList);
 
-        var deviatedWriter = new DeviatedWriter();
-        deviatedWriter.write(dateToDeviatedSet);
+        var deviatedWriter = new Writer();
+        deviatedWriter.write(dateToNotDeviatedSet);
     }
 
 }

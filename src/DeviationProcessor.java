@@ -9,14 +9,14 @@ import java.util.Set;
 import entity.TeaBrewing;
 
 /**
- * Обработчик, ищущий людей, отклонившихся от процесса заваривания.
+ * Обработчик, ищущий людей, ни разу не отклонившихся от процесса заваривания.
  *
  * @author Vadim Podogov
  * @since 2024.01.22
  */
 public class DeviationProcessor {
 
-    public Map<LocalDate, Set<String>> findDateToDeviatedPersons(List<TeaBrewing> teaBrewingList) {
+    public Map<LocalDate, Set<String>> findDateToNotDeviatedPersons(List<TeaBrewing> teaBrewingList) {
         var dateToEmployeeNames = new HashMap<LocalDate, Set<String>>();
         var dateToIncorrectBrewingEmployees = new HashMap<LocalDate, Set<String>>();
         teaBrewingList.forEach(teaBrewing -> {

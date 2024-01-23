@@ -11,12 +11,12 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Класс для записи результата.
+ * Класс для записи результата в файл.
  *
  * @author Vadim Podogov
  * @since 2024.01.22
  */
-public class DeviatedWriter {
+public class Writer {
 
     private static final String RESULT_FILENAME = "src\\result.txt";
 
